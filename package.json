@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-camera-preview",
+  "name": "capacitor-plugin-camera-preview",
   "version": "5.0.0-0",
   "description": "Camera preview",
   "main": "dist/esm/index.js",

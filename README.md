@@ -1,11 +1,11 @@
 <p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
 <h3 align="center">Capacitor Camera Preview</h3>
-<p align="center"><strong><code>cordova-plugin-camera-preview</code></strong></p>
+<p align="center"><strong><code>capacitor-plugin-camera-preview</code></strong></p>
 <br>
 <p align="center"><strong>CAPACITOR 4</strong></p><br>
 
 <p align="center">
-  Capacitor plugin that allows camera interaction from Javascript and HTML<br>(based on cordova-plugin-camera-preview).
+  Capacitor plugin that allows camera interaction from Javascript and HTML<br>(based on capacitor-plugin-camera-preview).
 </p>
 <br>
 Version 4 of this plugin requires Capacitor 4. If you are using Capacitor 3, use [version 3](https://github.com/huynhtheviet/capacitor-plugin-camera-preview/releases/tag/v3.1.2)
@@ -33,11 +33,11 @@ Version 2+ of this plugin is compatible with Ionic 5+ and Capacitor 3. If your p
 # Installation
 
 ```
-yarn add cordova-plugin-camera-preview
+yarn add capacitor-plugin-camera-preview
 
 or
 
-npm install cordova-plugin-camera-preview
+npm install capacitor-plugin-camera-preview
 ```
 Then run
 ```
@@ -57,7 +57,7 @@ For more help consult the [Capacitor docs](https://capacitorjs.com/docs/android/
 You will need to add two permissions to `Info.plist`. Follow the [Capacitor docs](https://capacitorjs.com/docs/ios/configuration#configuring-infoplist) and add permissions with the raw keys `NSCameraUsageDescription` and `NSMicrophoneUsageDescription`. `NSMicrophoneUsageDescription` is only required, if audio will be used. Otherwise set the `disableAudio` option to `true`, which also disables the microphone permission request.
 
 ## Extra Web installation steps
-Add `import 'cordova-plugin-camera-preview'` to you entry script in ionic on `app.module.ts`, so capacitor can register the web platform from the plugin
+Add `import 'capacitor-plugin-camera-preview'` to you entry script in ionic on `app.module.ts`, so capacitor can register the web platform from the plugin
 
 then in html add
 
@@ -110,7 +110,7 @@ All options stated are optional and will default to values here
 * `disableExifHeaderStripping` - Defaults to false - **Android Only** - Disable automatic rotation of the image, and let the browser deal with it (keep reading on how to achieve it) -->
 
 ```javascript
-import { CameraPreview, CameraPreviewOptions } from 'cordova-plugin-camera-preview';
+import { CameraPreview, CameraPreviewOptions } from 'capacitor-plugin-camera-preview';
 
 const cameraPreviewOptions: CameraPreviewOptions = {
   position: 'rear',
@@ -202,7 +202,7 @@ CameraPreview.hide();
 <!-- <info>Take the picture. If width and height are not specified or are 0 it will use the defaults. If width and height are specified, it will choose a supported photo size that is closest to width and height specified and has closest aspect ratio to the preview. The argument `quality` defaults to `85` and specifies the quality/compression value: `0=max compression`, `100=max quality`.</info><br/> -->
 
 ```javascript
-import { CameraPreviewPictureOptions } from 'cordova-plugin-camera-preview';
+import { CameraPreviewPictureOptions } from 'capacitor-plugin-camera-preview';
 
 const cameraPreviewPictureOptions: CameraPreviewPictureOptions = {
   quality: 50
@@ -224,7 +224,7 @@ const base64PictureData = result.value;
 <info>Captures a sample image from the video stream. Only for Android and iOS, web implementation falls back to `capture` method. This can be used to perform real-time analysis on the current frame in the video. The argument `quality` defaults to `85` and specifies the quality/compression value: `0=max compression`, `100=max quality`.</info><br/>
 
 ```javascript
-import { CameraSampleOptions } from 'cordova-plugin-camera-preview';
+import { CameraSampleOptions } from 'capacitor-plugin-camera-preview';
 
 const cameraSampleOptions: CameraSampleOptions = {
   quality: 50
@@ -242,7 +242,7 @@ const base64PictureData = result.value;
 <info>Get the flash modes supported by the camera device currently started. Returns an array containing supported flash modes. See <code>[FLASH_MODE](#camera_Settings.FlashMode)</code> for possible values that can be returned</info><br/>
 
 ```javascript
-import { CameraPreviewFlashMode } from 'cordova-plugin-camera-preview';
+import { CameraPreviewFlashMode } from 'capacitor-plugin-camera-preview';
 
 const flashModes = await CameraPreview.getSupportedFlashModes();
 const supportedFlashModes: CameraPreviewFlashMode[] = flashModes.result;
@@ -413,18 +413,18 @@ If you need a different version, add argument `--variable ANDROID_SUPPORT_LIBRAR
 Or edit `config.xml` with following,
 
 ```xml
-<plugin name="cordova-plugin-camera-preview" spec="X.X.X">
+<plugin name="capacitor-plugin-camera-preview" spec="X.X.X">
   <variable name="ANDROID_SUPPORT_LIBRARY_VERSION" value="26+" />
 </plugin>
 ```
 
 # Sample App
 
-<a href="https://github.com/cordova-plugin-camera-preview/cordova-plugin-camera-preview-sample-app">cordova-plugin-camera-preview-sample-app</a> for a complete working Cordova example for Android and iOS platforms.
+<a href="https://github.com/capacitor-plugin-camera-preview/capacitor-plugin-camera-preview-sample-app">capacitor-plugin-camera-preview-sample-app</a> for a complete working Cordova example for Android and iOS platforms.
 
 # Screenshots
 
-<img src="https://raw.githubusercontent.com/cordova-plugin-camera-preview/cordova-plugin-camera-preview/master/img/android-1.png"/> <img hspace="20" src="https://raw.githubusercontent.com/cordova-plugin-camera-preview/cordova-plugin-camera-preview/master/img/android-2.png"/>
+<img src="https://raw.githubusercontent.com/capacitor-plugin-camera-preview/capacitor-plugin-camera-preview/master/img/android-1.png"/> <img hspace="20" src="https://raw.githubusercontent.com/capacitor-plugin-camera-preview/capacitor-plugin-camera-preview/master/img/android-2.png"/>
 
 # Credits
 
